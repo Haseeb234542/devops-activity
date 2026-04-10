@@ -1,0 +1,12 @@
+json 
+{ 
+"name": "devops-activity", 
+"version": "1.0.0", 
+"scripts": { 
+"start": "node index.js", 
+"test": "node test.js" 
+}, 
+"dependencies": { 
+"express": "^4.18.2" 
+} 
+}
