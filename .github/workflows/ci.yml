@@ -2,16 +2,18 @@ name: Node.js CI
 
 on:
   pull_request:
-    [cite_start]branches: [ main ] # Runs on pull requests to main [cite: 12, 52]
+    branches: [ main ]
+  push:
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - [cite_start]uses: actions/checkout@v4 # Checks out code [cite: 54]
+    - uses: actions/checkout@v4
     - name: Use Node.js
-      [cite_start]uses: actions/setup-node@v4 # Sets up Node.js [cite: 54]
+      uses: actions/setup-node@v4
       with:
         node-version: '20'
-    - [cite_start]run: npm install # Runs npm install [cite: 54]
-    - [cite_start]run: npm test # Runs npm test [cite: 54]
+    - run: npm install
+    - run: npm test
